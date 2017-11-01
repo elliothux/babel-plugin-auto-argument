@@ -26,26 +26,28 @@ Edit your __.babelrc__ file:
 ```
 In your js file:
 ```js
-[1, 2, 3].map(__ * 2)
+[1, 2, 3].map(_ * 2)
 ```
 And it will be compiled to:
 ```js
-[1, 2, 3].map(_ => _ * 2)
+[1, 2, 3].map(function (_) { 
+    return _ * 2
+})
 ```
 
-## 3. Usage with custom attribute name
+## 3. Usage with custom variable name
 Edit your __.babelrc__ file:
 ```json
 {
   "plugins": [
     "auto-argument",
     {
-      "variableName": "__"
+      "variableName": "$"
     }
   ]
 }
 ```
 In your js file:
 ```js
-[1, 2, 3].map(__ * 2)
+[1, 2, 3].map($ * 2)
 ```
