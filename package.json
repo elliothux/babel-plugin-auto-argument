@@ -1,6 +1,6 @@
 {
-  "name": "babel-plugin-underscore-arg",
-  "version": "1.0.0",
+  "name": "babel-plugin-auto-argument",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT"
 }
