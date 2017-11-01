@@ -35,6 +35,23 @@ And it will be compiled to:
 })
 ```
 
+In your js file:
+```js
+const a = [
+    [1, 2],
+    [3, 4, 5],
+    [6, 7, 8, 9]
+].filter(_.length <= 3).map(_.filter(10 % _ === 0));
+console.log(a);
+```
+And it will print:
+```js
+[
+    [1, 2],
+    [5]
+]
+```
+
 ## 3. Usage with custom variable name
 Edit your __.babelrc__ file:
 ```json
