@@ -17,9 +17,6 @@ module.exports = function ({types: t}) {
 
 
         function hasUnderscore(node, path) {
-            // console.log(path.scope.hasBinding("_"));
-            // console.log(path.scope.hasOwnBinding("_"));
-            console.log(node.type)
             if (Array.isArray(node))
                 return node.map(n => hasUnderscore(n, path)).filter(n => n).length > 0;
             else if (node.type === 'CallExpression')
